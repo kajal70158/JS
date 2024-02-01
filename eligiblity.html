@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Voting Eligibility</title>
+    <style>
+        body{
+            background-color: grey;
+            padding: 0px;
+            margin: 0px;
+        }
+        .container{
+            text-align: center;
+            margin: 50px auto;
+            padding: 20px;
+            border-radius: 5px;
+            max-width: 400px;
+            box-shadow: grey;
+            background-color: white;
+        }
+    </style>
+
+</head>
+<body>
+    <div class="container">
+        <h3>Voter Eligiblity Checker</h3>
+        <label>Enter your age:</label>
+        <input type="number" id="age" required>
+        <button onclick="votingEligibility()">Check Eligibility</button>
+        <p id="result"></p>
+        <img src="C:\Users\LENOVO\Pictures\vote.jpg">
+    </div>
+    <script>
+
+        function votingEligibility(){
+            var age = document.getElementById("age").value;
+
+            if (age >= 18) {
+                document.getElementById("result").textContent = " You are  eligible to vote!";
+            } else 
+            {
+            document.getElementById("result").textContent = "Sorry, you are not eligible to vote.";
+            }
+        }
+        
+    </script>
+</body>
+</html>
